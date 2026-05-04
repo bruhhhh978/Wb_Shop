@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KTV AI — Triển khai AI thực chiến cho doanh nghiệp</title>
+    <meta
+      name="description"
+      content="KTV AI cung cấp dịch vụ tư vấn và triển khai AI: Chatbot/CSKH, tự động hoá quy trình, LLM nội bộ (RAG), OCR/CV, phân tích dữ liệu. Nhận tư vấn miễn phí."
+    />
+
+    <meta property="og:title" content="KTV AI — Triển khai AI thực chiến cho doanh nghiệp" />
+    <meta
+      property="og:description"
+      content="Dịch vụ AI tối giản, hiệu quả, triển khai nhanh. Chatbot, RPA+AI, LLM nội bộ (RAG), OCR/CV, dữ liệu & phân tích."
+    />
+    <meta property="og:type" content="website" />
+
+    <meta name="theme-color" content="#0B0B0C" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Bỏ qua tới nội dung chính</a>
+
+    <header class="site-header" data-elevate>
+      <div class="container header-inner">
+        <a class="brand" href="#" aria-label="KTV AI">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-text">KTV AI</span>
+        </a>
+
+        <nav class="nav" aria-label="Điều hướng chính">
+          <a href="#dich-vu">Dịch vụ</a>
+          <a href="#quy-trinh">Quy trình</a>
+          <a href="#case-studies">Case</a>
+          <a href="#bang-gia">Hợp tác</a>
+          <a href="#faq">FAQ</a>
+          <a class="nav-cta" href="#lien-he">Nhận tư vấn</a>
+        </nav>
+
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="sr-only">Mở menu</span>
+          <span class="menu-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu" hidden>
+        <div class="container mobile-inner">
+          <a href="#dich-vu">Dịch vụ</a>
+          <a href="#quy-trinh">Quy trình</a>
+          <a href="#case-studies">Case</a>
+          <a href="#bang-gia">Hợp tác</a>
+          <a href="#faq">FAQ</a>
+          <a class="mobile-cta" href="#lien-he">Nhận tư vấn</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO (full-bleed editorial) -->
+      <section class="hero" aria-label="Giới thiệu">
+        <div class="hero-media" aria-hidden="true">
+          <div class="hero-photo"></div>
+          <div class="hero-overlay"></div>
+        </div>
+
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <p class="eyebrow">Triển khai AI • Nhanh • Rõ ràng • Đo được hiệu quả</p>
+            <h1>KTV AI — triển khai AI thực chiến cho doanh nghiệp</h1>
+            <p class="lead">
+              Chúng tôi thiết kế và vận hành các giải pháp AI tối giản nhưng mạnh: chatbot CSKH, tự động hoá
+              quy trình, LLM nội bộ (RAG), OCR/CV và phân tích dữ liệu — tập trung vào tác động kinh doanh.
+            </p>
+
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#lien-he">Nhận tư vấn</a>
+              <a class="btn btn-secondary" href="#dich-vu">Xem dịch vụ</a>
+            </div>
+
+            <div class="hero-metrics" aria-label="Số liệu nổi bật">
+              <div class="metric">
+                <div class="metric-value">2–6 tuần</div>
+                <div class="metric-label">POC → triển khai</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">Rõ KPI</div>
+                <div class="metric-label">đo hiệu quả</div>
+              </div>
+              <div class="metric">
+                <div class="metric-value">Bảo mật</div>
+                <div class="metric-label">tuỳ yêu cầu</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card" aria-label="Tóm tắt dịch vụ">
+            <div class="hero-card-top">
+              <div class="pill">AI Services</div>
+              <div class="pill pill-muted">2026</div>
+            </div>
+            <h2 class="h3">Một hệ AI gọn, chạy được, dùng được</h2>
+            <p class="muted">
+              Ưu tiên tính ứng dụng: quy trình, dữ liệu, vận hành — không chỉ demo.
+            </p>
+            <ul class="checklist">
+              <li>Thiết kế giải pháp theo bài toán</li>
+              <li>Tích hợp hệ thống hiện tại</li>
+              <li>Triển khai & giám sát</li>
+              <li>Đào tạo & bàn giao</li>
+            </ul>
+            <a class="link" href="#quy-trinh">Xem quy trình</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURE STRIP (editorial breathing space) -->
+      <section class="strip" aria-label="Điểm khác biệt">
+        <div class="container strip-inner">
+          <div class="strip-line"></div>
+          <p>
+            <strong>Tối giản trong UI.</strong> <span class="muted">Tối ưu trong vận hành.</span>
+            <strong>Rõ ràng trong đo lường.</strong>
+          </p>
+          <div class="strip-line"></div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section class="section" id="dich-vu">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Dịch vụ</p>
+              <h2>Những khối AI bạn có thể dùng ngay</h2>
+            </div>
+            <p class="muted max-38">
+              Mỗi dịch vụ được thiết kế theo “đầu ra” (outcome): giảm thời gian xử lý, tăng conversion, giảm
+              sai sót, tăng tốc ra quyết định.
+            </p>
+          </div>
+
+          <div class="grid services">
+            <article class="card">
+              <div class="card-top">
+                <div class="tag">Chatbot</div>
+                <div class="tag tag-muted">CSKH</div>
+              </div>
+              <h3>AI Chatbot / CSKH đa kênh</h3>
+              <p class="muted">
+                Trả lời theo knowledge base, handoff sang người thật, báo cáo câu hỏi & chất lượng.
+              </p>
+              <a class="link" href="#lien-he">Nhận demo</a>
+            </article>
+
+            <article class="card">
+              <div class="card-top">
+                <div class="tag">Automation</div>
+                <div class="tag tag-muted">RPA + AI</div>
+              </div>
+              <h3>Tự động hoá quy trình</h3>
+              <p class="muted">
+                Tự động hoá xử lý ticket, nhập liệu, tổng hợp báo cáo, kiểm tra chứng từ.
+              </p>
+              <a class="link" href="#quy-trinh">Xem cách làm</a>
+            </article>
+
+            <article class="card">
+              <div class="card-top">
+                <div class="tag">LLM nội bộ</div>
+                <div class="tag tag-muted">RAG</div>
+              </div>
+              <h3>Trợ lý tri thức doanh nghiệp</h3>
+              <p class="muted">
+                Tìm kiếm & trả lời từ tài liệu nội bộ, phân quyền truy cập, audit đầy đủ.
+              </p>
+              <a class="link" href="#case-studies">Xem case</a>
+            </article>
+
+            <article class="card">
+              <div class="card-top">
+                <div class="tag">OCR/CV</div>
+                <div class="tag tag-muted">Vision</div>
+              </div>
+              <h3>OCR & Computer Vision</h3>
+              <p class="muted">
+                Trích xuất dữ liệu hoá đơn/chứng từ, kiểm tra chất lượng ảnh, phát hiện lỗi.
+              </p>
+              <a class="link" href="#lien-he">Nhận tư vấn</a>
+            </article>
+
+            <article class="card">
+              <div class="card-top">
+                <div class="tag">Data</div>
+                <div class="tag tag-muted">BI</div>
+              </div>
+              <h3>Dữ liệu & phân tích</h3>
+              <p class="muted">
+                Dashboard, dự báo, phân khúc, cảnh báo bất thường — ra quyết định nhanh hơn.
+              </p>
+              <a class="link" href="#bang-gia">Cách hợp tác</a>
+            </article>
+
+            <article class="card card-contrast">
+              <div class="card-top">
+                <div class="tag tag-invert">Audit</div>
+                <div class="tag tag-invert-muted">Security</div>
+              </div>
+              <h3>Đánh giá & roadmap AI</h3>
+              <p class="muted-invert">
+                Xác định bài toán ưu tiên, dữ liệu cần có, phương án triển khai và KPI đo hiệu quả.
+              </p>
+              <a class="link link-invert" href="#lien-he">Đặt workshop</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS (editorial split with “image” panel) -->
+      <section class="section section-split" id="quy-trinh" aria-label="Quy trình">
+        <div class="split-media" aria-hidden="true">
+          <div class="panel-photo panel-photo-a"></div>
+        </div>
+
+        <div class="container split-inner">
+          <div class="split-copy">
+            <p class="eyebrow">Quy trình</p>
+            <h2>Từ bài toán → hệ chạy thật</h2>
+            <p class="muted max-46">
+              Chúng tôi triển khai theo vòng lặp ngắn để giảm rủi ro và đảm bảo hệ thống đi vào vận hành.
+            </p>
+
+            <ol class="steps">
+              <li>
+                <div class="step-no">01</div>
+                <div class="step-body">
+                  <h3>Khảo sát & KPI</h3>
+                  <p class="muted">Chốt mục tiêu, dữ liệu, luồng nghiệp vụ, tiêu chí thành công.</p>
+                </div>
+              </li>
+              <li>
+                <div class="step-no">02</div>
+                <div class="step-body">
+                  <h3>POC trong 2–6 tuần</h3>
+                  <p class="muted">Dựng bản chạy được, đo chất lượng, điều chỉnh nhanh.</p>
+                </div>
+              </li>
+              <li>
+                <div class="step-no">03</div>
+                <div class="step-body">
+                  <h3>Triển khai & tích hợp</h3>
+                  <p class="muted">Tích hợp hệ thống hiện có, phân quyền, logging, giám sát.</p>
+                </div>
+              </li>
+              <li>
+                <div class="step-no">04</div>
+                <div class="step-body">
+                  <h3>Vận hành & tối ưu</h3>
+                  <p class="muted">Theo dõi KPI, tối ưu prompt/flow, cải thiện dữ liệu theo thời gian.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- CASE STUDIES (full-bleed tiles like inspiration) -->
+      <section class="section section-bleed" id="case-studies" aria-label="Case studies">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Case studies</p>
+              <h2>Kết quả đo được</h2>
+            </div>
+            <p class="muted max-38">
+              Ví dụ minh hoạ (demo). Khi triển khai thực tế, số liệu sẽ được đo theo KPI đã chốt.
+            </p>
+          </div>
+        </div>
+
+        <div class="tiles" role="list">
+          <article class="tile" role="listitem">
+            <div class="tile-media tile-media-1" aria-hidden="true"></div>
+            <div class="tile-body">
+              <div class="tile-pill">Retail</div>
+              <h3>Chatbot giảm tải CSKH</h3>
+              <p class="muted">Giảm 35% ticket lặp lại, tăng tốc phản hồi giờ cao điểm.</p>
+              <a class="btn btn-tertiary" href="#lien-he">Yêu cầu demo</a>
+            </div>
+          </article>
+
+          <article class="tile" role="listitem">
+            <div class="tile-media tile-media-2" aria-hidden="true"></div>
+            <div class="tile-body">
+              <div class="tile-pill">Back-office</div>
+              <h3>OCR chứng từ tự động</h3>
+              <p class="muted">Giảm sai sót nhập liệu, tự động đối soát và cảnh báo bất thường.</p>
+              <a class="btn btn-tertiary" href="#lien-he">Nhận tư vấn</a>
+            </div>
+          </article>
+
+          <article class="tile" role="listitem">
+            <div class="tile-media tile-media-3" aria-hidden="true"></div>
+            <div class="tile-body">
+              <div class="tile-pill">Knowledge</div>
+              <h3>Trợ lý nội bộ (RAG)</h3>
+              <p class="muted">Tra cứu quy trình/tài liệu nhanh, phân quyền theo phòng ban.</p>
+              <a class="btn btn-tertiary" href="#lien-he">Đặt workshop</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ENGAGEMENT / PRICING -->
+      <section class="section" id="bang-gia" aria-label="Cách hợp tác">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Hợp tác</p>
+              <h2>Chọn cách bắt đầu phù hợp</h2>
+            </div>
+            <p class="muted max-38">
+              Bạn có thể bắt đầu nhỏ (workshop/POC) rồi mở rộng dần, tránh “big-bang”.
+            </p>
+          </div>
+
+          <div class="grid plans">
+            <article class="plan">
+              <h3>Workshop</h3>
+              <p class="muted">Xác định bài toán ưu tiên, dữ liệu, KPI, roadmap.</p>
+              <ul class="bullets">
+                <li>1–2 buổi làm việc</li>
+                <li>Checklist dữ liệu & rủi ro</li>
+                <li>Kế hoạch triển khai</li>
+              </ul>
+              <a class="btn btn-secondary" href="#lien-he">Đặt lịch</a>
+            </article>
+
+            <article class="plan plan-featured">
+              <div class="plan-badge">Phổ biến</div>
+              <h3>POC</h3>
+              <p class="muted">
+                Dựng bản chạy được trong 2–6 tuần, đo chất lượng và tác động.
+              </p>
+              <ul class="bullets">
+                <li>Prototype end-to-end</li>
+                <li>Đo KPI & đề xuất tối ưu</li>
+                <li>Khuyến nghị triển khai</li>
+              </ul>
+              <a class="btn btn-primary" href="#lien-he">Nhận báo giá</a>
+            </article>
+
+            <article class="plan">
+              <h3>Retainer</h3>
+              <p class="muted">Vận hành, tối ưu, mở rộng theo KPI hàng tháng.</p>
+              <ul class="bullets">
+                <li>Giám sát & cải thiện</li>
+                <li>Thêm tính năng theo sprint</li>
+                <li>Báo cáo định kỳ</li>
+              </ul>
+              <a class="btn btn-secondary" href="#lien-he">Trao đổi</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="section" id="faq" aria-label="Câu hỏi thường gặp">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">FAQ</p>
+              <h2>Những câu hỏi thường gặp</h2>
+            </div>
+            <p class="muted max-38">
+              Nếu bạn cần đánh giá nhanh mức phù hợp, hãy gửi mô tả quy trình và dữ liệu đang có.
+            </p>
+          </div>
+
+          <div class="faq">
+            <details>
+              <summary>Chúng tôi cần chuẩn bị gì để bắt đầu?</summary>
+              <div class="faq-body">
+                <p class="muted">
+                  Mô tả bài toán, nguồn dữ liệu (file/hệ thống), quy trình hiện tại và KPI mong muốn. Nếu
+                  chưa rõ KPI, workshop sẽ giúp bạn xác định.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>Dữ liệu nội bộ có thể giữ riêng không?</summary>
+              <div class="faq-body">
+                <p class="muted">
+                  Có. Tuỳ yêu cầu, chúng tôi có thể triển khai theo các mức: cloud, private cloud, hoặc
+                  on‑premise; kèm phân quyền, logging và audit.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>POC khác gì với “demo”?</summary>
+              <div class="faq-body">
+                <p class="muted">
+                  Demo minh hoạ năng lực. POC là bản chạy theo dữ liệu/quy trình của bạn, có đo chất lượng
+                  và rủi ro tích hợp.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT (split editorial) -->
+      <section class="section section-split section-split-rev" id="lien-he" aria-label="Liên hệ">
+        <div class="split-media" aria-hidden="true">
+          <div class="panel-photo panel-photo-b"></div>
+        </div>
+
+        <div class="container split-inner">
+          <div class="split-copy">
+            <p class="eyebrow">Liên hệ</p>
+            <h2>Nhận tư vấn trong 24 giờ</h2>
+            <p class="muted max-46">
+              Gửi mô tả ngắn về bài toán. Chúng tôi phản hồi với hướng tiếp cận, phạm vi và bước POC phù hợp.
+            </p>
+
+            <form class="form" id="contactForm">
+              <div class="field">
+                <label for="name">Tên</label>
+                <input id="name" name="name" autocomplete="name" placeholder="Nguyễn Văn A" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="you@company.com"
+                  required
+                />
+              </div>
+              <div class="field">
+                <label for="message">Bài toán của bạn</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="4"
+                  placeholder="Mô tả quy trình, dữ liệu, KPI mong muốn..."
+                  required
+                ></textarea>
+              </div>
+
+              <div class="form-row">
+                <button class="btn btn-primary" type="submit">Gửi yêu cầu</button>
+                <a class="btn btn-secondary" href="mailto:hello@ktv.ai?subject=Tu%20van%20AI%20-%20KTV%20AI"
+                  >Email trực tiếp</a
+                >
+              </div>
+              <p class="fine muted" id="formNote" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" aria-label="Footer">
+      <div class="container footer-inner">
+        <div class="footer-left">
+          <div class="brand footer-brand">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="brand-text">KTV AI</span>
+          </div>
+          <p class="muted max-38">
+            Dịch vụ AI tối giản, hiệu quả, triển khai nhanh — tập trung vào tác động kinh doanh.
+          </p>
+        </div>
+        <div class="footer-right">
+          <div class="footer-col">
+            <div class="footer-title">Liên hệ</div>
+            <a href="mailto:hello@ktv.ai">hello@ktv.ai</a>
+            <a href="#lien-he">Nhận tư vấn</a>
+          </div>
+          <div class="footer-col">
+            <div class="footer-title">Trang</div>
+            <a href="#dich-vu">Dịch vụ</a>
+            <a href="#quy-trinh">Quy trình</a>
+            <a href="#faq">FAQ</a>
+          </div>
+          <div class="footer-col">
+            <div class="footer-title">Pháp lý</div>
+            <a href="#" aria-disabled="true">Điều khoản</a>
+            <a href="#" aria-disabled="true">Bảo mật</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <span class="muted">© <span id="year"></span> KTV AI. All rights reserved.</span>
+        <span class="muted">Built with clarity.</span>
+      </div>
+    </footer>
+
+    <script>
+      // Minimal JS: menu + form mailto + year (no heavy deps)
+      const menuBtn = document.querySelector(".menu-btn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const navLinks = mobileMenu ? Array.from(mobileMenu.querySelectorAll("a")) : [];
+
+      function setMenu(open) {
+        if (!menuBtn || !mobileMenu) return;
+        menuBtn.setAttribute("aria-expanded", String(open));
+        mobileMenu.hidden = !open;
+        document.documentElement.classList.toggle("menu-open", open);
+      }
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => {
+          const isOpen = menuBtn.getAttribute("aria-expanded") === "true";
+          setMenu(!isOpen);
+        });
+        navLinks.forEach((a) =>
+          a.addEventListener("click", () => {
+            setMenu(false);
+          }),
+        );
+        window.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") setMenu(false);
+        });
+      }
+
+      document.getElementById("year").textContent = String(new Date().getFullYear());
+
+      const contactForm = document.getElementById("contactForm");
+      const formNote = document.getElementById("formNote");
+      if (contactForm) {
+        contactForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const fd = new FormData(contactForm);
+          const name = String(fd.get("name") || "").trim();
+          const email = String(fd.get("email") || "").trim();
+          const message = String(fd.get("message") || "").trim();
+          const subject = encodeURIComponent(`Tư vấn AI - ${name || "KTV AI"}`);
+          const body = encodeURIComponent(`Tên: ${name}\nEmail: ${email}\n\nBài toán:\n${message}\n`);
+          window.location.href = `mailto:hello@ktv.ai?subject=${subject}&body=${body}`;
+          if (formNote) formNote.textContent = "Đang mở email… Nếu không tự mở, hãy dùng nút “Email trực tiếp”.";
+        });
+      }
+
+      // Header elevate on scroll for subtle premium feel
+      const header = document.querySelector("[data-elevate]");
+      const onScroll = () => {
+        if (!header) return;
+        header.classList.toggle("is-scrolled", window.scrollY > 8);
+      };
+      onScroll();
+      window.addEventListener("scroll", onScroll, { passive: true });
+    </script>
+  </body>
+</html>
+
