@@ -1,16 +1,22 @@
 {
   "name": "wb_shop",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "KTV AI — landing website",
+  "packageManager": "pnpm@9.15.9",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "screenshot": "node tools/screenshot-after-build.js",
+    "build:compare": "pnpm run build && pnpm run screenshot"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "playwright": "^1.59.1"
+    "playwright": "^1.59.1",
+    "vite": "^6.3.5"
   }
 }

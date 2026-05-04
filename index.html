@@ -25,13 +25,41 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./styles.css" />
+    <script>
+      document.documentElement.classList.add("has-js");
+    </script>
+    <style>
+      /* Critical: scroll reveal trước khi bundle CSS (Vite) tải xong — tránh FOUC */
+      .scroll-section {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+      html.has-js .scroll-section {
+        opacity: 0;
+        transform: translateY(28px);
+        transition: opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+        will-change: opacity, transform;
+      }
+      html.has-js .scroll-section.scroll-section--in {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html.has-js .scroll-section {
+          opacity: 1;
+          transform: none;
+          transition: none;
+          will-change: auto;
+        }
+      }
+    </style>
   </head>
 
   <body>
     <a class="skip-link" href="#main">Bỏ qua tới nội dung chính</a>
 
-    <header class="site-header" data-elevate>
+    <header class="site-header scroll-section" data-elevate>
       <div class="container header-inner">
         <a class="brand" href="#" aria-label="KTV AI">
           <span class="brand-mark" aria-hidden="true"></span>
@@ -67,7 +95,7 @@
 
     <main id="main">
       <!-- HERO (full-bleed editorial) -->
-      <section class="hero" aria-label="Giới thiệu">
+      <section class="hero scroll-section" aria-label="Giới thiệu">
         <div class="hero-media" aria-hidden="true">
           <div class="hero-photo"></div>
           <div class="hero-overlay"></div>
@@ -124,7 +152,7 @@
       </section>
 
       <!-- FEATURE STRIP (editorial breathing space) -->
-      <section class="strip" aria-label="Điểm khác biệt">
+      <section class="strip scroll-section" aria-label="Điểm khác biệt">
         <div class="container strip-inner">
           <div class="strip-line"></div>
           <p>
@@ -136,7 +164,7 @@
       </section>
 
       <!-- SERVICES -->
-      <section class="section" id="dich-vu">
+      <section class="section scroll-section" id="dich-vu">
         <div class="container">
           <div class="section-head">
             <div>
@@ -226,7 +254,7 @@
       </section>
 
       <!-- PROCESS (editorial split with “image” panel) -->
-      <section class="section section-split" id="quy-trinh" aria-label="Quy trình">
+      <section class="section section-split scroll-section" id="quy-trinh" aria-label="Quy trình">
         <div class="split-media" aria-hidden="true">
           <div class="panel-photo panel-photo-a"></div>
         </div>
@@ -274,7 +302,7 @@
       </section>
 
       <!-- CASE STUDIES (full-bleed tiles like inspiration) -->
-      <section class="section section-bleed" id="case-studies" aria-label="Case studies">
+      <section class="section section-bleed scroll-section" id="case-studies" aria-label="Case studies">
         <div class="container">
           <div class="section-head">
             <div>
@@ -321,7 +349,7 @@
       </section>
 
       <!-- ENGAGEMENT / PRICING -->
-      <section class="section" id="bang-gia" aria-label="Cách hợp tác">
+      <section class="section scroll-section" id="bang-gia" aria-label="Cách hợp tác">
         <div class="container">
           <div class="section-head">
             <div>
@@ -374,7 +402,7 @@
       </section>
 
       <!-- FAQ -->
-      <section class="section" id="faq" aria-label="Câu hỏi thường gặp">
+      <section class="section scroll-section" id="faq" aria-label="Câu hỏi thường gặp">
         <div class="container">
           <div class="section-head">
             <div>
@@ -419,7 +447,7 @@
       </section>
 
       <!-- CONTACT (split editorial) -->
-      <section class="section section-split section-split-rev" id="lien-he" aria-label="Liên hệ">
+      <section class="section section-split section-split-rev scroll-section" id="lien-he" aria-label="Liên hệ">
         <div class="split-media" aria-hidden="true">
           <div class="panel-photo panel-photo-b"></div>
         </div>
@@ -472,7 +500,7 @@
       </section>
     </main>
 
-    <footer class="footer" aria-label="Footer">
+    <footer class="footer scroll-section" aria-label="Footer">
       <div class="container footer-inner">
         <div class="footer-left">
           <div class="brand footer-brand">
@@ -509,61 +537,7 @@
       </div>
     </footer>
 
-    <script>
-      // Minimal JS: menu + form mailto + year (no heavy deps)
-      const menuBtn = document.querySelector(".menu-btn");
-      const mobileMenu = document.getElementById("mobileMenu");
-      const navLinks = mobileMenu ? Array.from(mobileMenu.querySelectorAll("a")) : [];
-
-      function setMenu(open) {
-        if (!menuBtn || !mobileMenu) return;
-        menuBtn.setAttribute("aria-expanded", String(open));
-        mobileMenu.hidden = !open;
-        document.documentElement.classList.toggle("menu-open", open);
-      }
-
-      if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener("click", () => {
-          const isOpen = menuBtn.getAttribute("aria-expanded") === "true";
-          setMenu(!isOpen);
-        });
-        navLinks.forEach((a) =>
-          a.addEventListener("click", () => {
-            setMenu(false);
-          }),
-        );
-        window.addEventListener("keydown", (e) => {
-          if (e.key === "Escape") setMenu(false);
-        });
-      }
-
-      document.getElementById("year").textContent = String(new Date().getFullYear());
-
-      const contactForm = document.getElementById("contactForm");
-      const formNote = document.getElementById("formNote");
-      if (contactForm) {
-        contactForm.addEventListener("submit", (e) => {
-          e.preventDefault();
-          const fd = new FormData(contactForm);
-          const name = String(fd.get("name") || "").trim();
-          const email = String(fd.get("email") || "").trim();
-          const message = String(fd.get("message") || "").trim();
-          const subject = encodeURIComponent(`Tư vấn AI - ${name || "KTV AI"}`);
-          const body = encodeURIComponent(`Tên: ${name}\nEmail: ${email}\n\nBài toán:\n${message}\n`);
-          window.location.href = `mailto:hello@ktv.ai?subject=${subject}&body=${body}`;
-          if (formNote) formNote.textContent = "Đang mở email… Nếu không tự mở, hãy dùng nút “Email trực tiếp”.";
-        });
-      }
-
-      // Header elevate on scroll for subtle premium feel
-      const header = document.querySelector("[data-elevate]");
-      const onScroll = () => {
-        if (!header) return;
-        header.classList.toggle("is-scrolled", window.scrollY > 8);
-      };
-      onScroll();
-      window.addEventListener("scroll", onScroll, { passive: true });
-    </script>
+    <script type="module" src="/main.js"></script>
   </body>
 </html>
 

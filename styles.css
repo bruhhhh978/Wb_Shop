@@ -17,6 +17,7 @@
 }
 
 *{box-sizing:border-box}
+html.menu-open, html.menu-open body{overflow:hidden}
 html,body{height:100%}
 body{
   margin:0;
